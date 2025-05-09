@@ -67,6 +67,14 @@ Technologies
 
     Object-Oriented Programming
 
+## UML Class Diagram
+
+This project includes a class diagram in [diagram.puml](./diagram.puml).  
+It represents the relationships between Planet, Cargo, Ship, and its subclasses.
+
+You can render it using the [PlantUML extension for VS Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) or any [online PUML renderer](https://www.plantuml.com/plantuml/).
+
+
 Autors:
 
 JEFFERSON RICARDO DO AMARAL MELO
