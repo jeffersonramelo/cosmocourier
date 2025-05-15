@@ -1,0 +1,37 @@
+@startuml
+title UML Class Diagram - CosmoCourier 
+
+class Planet {
+  - name: string
+  - distance: number
+  + Planet(name: string, distance: number)
+}
+
+class Cargo {
+  - type: string
+  - weight: number
+  + Cargo(type: string, weight: number)
+}
+
+class Ship {
+  - name: string
+  - fuel: number
+  - capacity: number
+  + Ship(name: string, fuel: number, capacity: number)
+  + canDeliver(planet: Planet, cargo: Cargo): boolean
+  + deliver(planet: Planet, cargo: Cargo): void
+}
+
+class FastShip {
+  + canDeliver(planet: Planet, cargo: Cargo): boolean
+}
+
+class ArmoredShip {
+  + canDeliver(planet: Planet, cargo: Cargo): boolean
+}
+
+Planet <-- Ship : uses
+Cargo  <-- Ship : uses
+FastShip --|> Ship
+ArmoredShip --|> Ship
+@enduml
